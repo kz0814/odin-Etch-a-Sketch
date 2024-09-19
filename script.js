@@ -4,6 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const gridContainer = document.querySelector("#grid-container");
     const resizeButton = document.querySelector(".resizeButton");
 
+
+    function getRandomColor() {
+        let color;
+        do {
+            color = Math.floor(Math.random() * 16777215).toString(16);
+            color = "#" + color.padStart(6, '0');
+        } while (color === "#ffffff");
+        return color;
+    }
+
     function createGrid(size) {
         // Clear existing grid
         gridContainer.innerHTML = '';
@@ -18,9 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
             square.style.width = `${squareSize}px`;
             square.style.height = `${squareSize}px`;
 
+            const color = getRandomColor()
             // Add hover effect
             square.addEventListener("mouseover", () => {
-                square.style.backgroundColor = "lightblue";
+                square.style.backgroundColor = color;
             });
 
             gridContainer.appendChild(square);

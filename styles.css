@@ -22,6 +22,6 @@ body{
     width: calc(100%/16);
     height: calc(100%/16);
     box-sizing: border-box;
-    border : 1px solid none;
+    border : 1px solid black;
     background-color: white;
 }
