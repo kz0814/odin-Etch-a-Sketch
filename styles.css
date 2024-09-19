@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh; /* Set height to 100% of the viewport height to help center the item */
+    flex-direction: column;
+}
+
+.resizeButton{
+    margin-bottom: 30px;
+}
+#grid-container{
+    display:flex;
+    border: 3px solid black;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+}
+
+.gridItem{
+    width: calc(100%/16);
+    height: calc(100%/16);
+    box-sizing: border-box;
+    border : 1px solid none;
+    background-color: white;
+}
